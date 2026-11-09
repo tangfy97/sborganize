@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "udid": "synthetic-emoji-example",
+  "source": "fixture",
+  "note": "Synthetic peer groups and IDs. Not a phone dump.",
+  "icon_state": [
+    [
+      {
+        "bundleIdentifier": "synthetic.phone",
+        "displayName": "Phone"
+      }
+    ],
+    [
+      {
+        "listType": "folder",
+        "displayName": "📃",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.mail",
+              "displayName": "Mail"
+            },
+            {
+              "bundleIdentifier": "synthetic.outlook",
+              "displayName": "Outlook"
+            },
+            {
+              "bundleIdentifier": "synthetic.digid",
+              "displayName": "DigiD"
+            },
+            {
+              "bundleIdentifier": "synthetic.bankid",
+              "displayName": "BankID"
+            }
+          ]
+        ],
+        "syntheticFolderID": "📃"
+      },
+      {
+        "listType": "folder",
+        "displayName": "💰",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.revolut",
+              "displayName": "Revolut"
+            },
+            {
+              "bundleIdentifier": "synthetic.paypal",
+              "displayName": "PayPal"
+            }
+          ]
+        ],
+        "syntheticFolderID": "💰"
+      },
+      {
+        "listType": "folder",
+        "displayName": "🎬🎵",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.youtube",
+              "displayName": "YouTube"
+            },
+            {
+              "bundleIdentifier": "synthetic.spotify",
+              "displayName": "Spotify"
+            }
+          ]
+        ],
+        "syntheticFolderID": "🎬🎵"
+      },
+      {
+        "listType": "folder",
+        "displayName": "TV&AI",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.chatgpt",
+              "displayName": "ChatGPT"
+            },
+            {
+              "bundleIdentifier": "synthetic.claude",
+              "displayName": "Claude"
+            }
+          ]
+        ],
+        "syntheticFolderID": "TV&AI"
+      },
+      {
+        "listType": "folder",
+        "displayName": "🏃🏻",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.fitness",
+              "displayName": "Fitness"
+            },
+            {
+              "bundleIdentifier": "synthetic.health",
+              "displayName": "Health"
+            }
+          ]
+        ],
+        "syntheticFolderID": "🏃🏻"
+      },
+      {
+        "listType": "folder",
+        "displayName": "🚌🚄",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.maps",
+              "displayName": "Maps"
+            },
+            {
+              "bundleIdentifier": "synthetic.uber",
+              "displayName": "Uber"
+            }
+          ]
+        ],
+        "syntheticFolderID": "🚌🚄"
+      },
+      {
+        "listType": "folder",
+        "displayName": "✈️",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.airbnb",
+              "displayName": "Airbnb"
+            },
+            {
+              "bundleIdentifier": "synthetic.booking",
+              "displayName": "Booking"
+            }
+          ]
+        ],
+        "syntheticFolderID": "✈️"
+      },
+      {
+        "listType": "folder",
+        "displayName": "Utilities",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.notes",
+              "displayName": "Notes"
+            },
+            {
+              "bundleIdentifier": "synthetic.reminders",
+              "displayName": "Reminders"
+            }
+          ]
+        ],
+        "syntheticFolderID": "Utilities"
+      },
+      {
+        "listType": "widget",
+        "synthetic": true
+      }
+    ],
+    [
+      {
+        "bundleIdentifier": "synthetic.notion",
+        "displayName": "Notion"
+      },
+      {
+        "bundleIdentifier": "synthetic.authenticator",
+        "displayName": "Authenticator"
+      },
+      {
+        "bundleIdentifier": "synthetic.ibkr",
+        "displayName": "IBKR"
+      },
+      {
+        "bundleIdentifier": "synthetic.imdb",
+        "displayName": "IMDb"
+      },
+      {
+        "bundleIdentifier": "synthetic.meta-ai",
+        "displayName": "Meta AI"
+      },
+      {
+        "bundleIdentifier": "synthetic.njoy-fitness-app",
+        "displayName": "Njoy Fitness App"
+      },
+      {
+        "bundleIdentifier": "synthetic.didi",
+        "displayName": "DiDi"
+      },
+      {
+        "bundleIdentifier": "synthetic.uncatalogued",
+        "displayName": "Uncatalogued"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security and private data
+    url: https://github.com/tangfy97/sborganize/security
+    about: Report sensitive issues privately; do not upload device backups.

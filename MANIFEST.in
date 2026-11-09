@@ -1,0 +1,7 @@
+include AGENTS.md PRIVACY.md SECURITY.md CONTRIBUTING.md
+include CHANGELOG.md
+include README.zh-CN.md
+recursive-include docs *.md *.toml *.svg
+recursive-include fixtures *.json
+recursive-include tests *.py
+recursive-include scripts *.py

@@ -1,0 +1,37 @@
+# sborganize · local preferences
+# Every setting is optional. No credentials belong in this file.
+
+[planner]
+create_folders = true
+compact_folders = true
+new_folder_min_apps = 3
+folder_page_size = 9
+target_pages = 3
+
+[pins]
+# Exact bundle IDs that must remain at their current positions.
+bundle_ids = []
+
+[folders.map]
+# Target names must already exist on your phone.
+# Finance = "🏦💰"
+# Expenses = "🧾💸"
+# Learning = "📚☁️"
+
+[categories]
+# Explicit app purposes take precedence over built-in category guesses.
+# "com.example.bank" = "Finance"
+# "com.example.bill" = "Expenses"
+
+[folders.regions]
+# CN = "🇨🇳"
+# HK = "🇭🇰"
+
+[regions]
+# Service region, not publisher origin. GLOBAL means outside the CN/HK groups.
+# Use GLOBAL to keep a bank or billing service in its domain across regions.
+# "com.example.bank" = "GLOBAL"
+
+[smart]
+# Used only by explicit --cloud. Keys come from environment or hidden input.
+openrouter_model = "qwen/qwen3.5-flash-02-23"

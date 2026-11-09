@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "udid": "synthetic-regional",
+  "source": "fixture",
+  "note": "Synthetic layout. Two public DiDi bundle IDs test version-specific routing.",
+  "icon_state": [
+    [],
+    [
+      {
+        "listType": "folder",
+        "displayName": "🇨🇳",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.meituan",
+              "displayName": "Meituan"
+            }
+          ]
+        ]
+      },
+      {
+        "listType": "folder",
+        "displayName": "HK",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.octopus",
+              "displayName": "Octopus"
+            }
+          ]
+        ]
+      },
+      {
+        "listType": "folder",
+        "displayName": "🚌🚄",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.maps",
+              "displayName": "Maps"
+            },
+            {
+              "bundleIdentifier": "synthetic.uber",
+              "displayName": "Uber"
+            }
+          ]
+        ]
+      },
+      {
+        "listType": "folder",
+        "displayName": "✈️",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.airbnb",
+              "displayName": "Airbnb"
+            },
+            {
+              "bundleIdentifier": "synthetic.booking",
+              "displayName": "Booking"
+            }
+          ]
+        ]
+      },
+      {
+        "listType": "folder",
+        "displayName": "TV&AI",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "synthetic.chatgpt",
+              "displayName": "ChatGPT"
+            },
+            {
+              "bundleIdentifier": "synthetic.claude",
+              "displayName": "Claude"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "bundleIdentifier": "com.xiaojukeji.didi",
+        "displayName": "DiDi"
+      },
+      {
+        "bundleIdentifier": "com.didi.global.passenger",
+        "displayName": "DiDi"
+      },
+      {
+        "bundleIdentifier": "synthetic.za",
+        "displayName": "ZA Bank"
+      },
+      {
+        "bundleIdentifier": "synthetic.royal",
+        "displayName": "Royal Jordanian"
+      },
+      {
+        "bundleIdentifier": "synthetic.ai",
+        "displayName": "Meta AI"
+      },
+      {
+        "bundleIdentifier": "synthetic.unknown",
+        "displayName": "未识别工具"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sborganize"
+version = "0.1.0a10"
+description = "A local, rules-first iPhone Home Screen organizer"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = ["typer>=0.28,<0.29", "rich>=15,<16"]
+keywords = ["iphone", "ios", "cli", "home-screen", "organization"]
+classifiers = ["Development Status :: 3 - Alpha", "Environment :: Console"]
+
+[project.urls]
+Homepage = "https://github.com/tangfy97/sborganize"
+Documentation = "https://github.com/tangfy97/sborganize#readme"
+Repository = "https://github.com/tangfy97/sborganize"
+Issues = "https://github.com/tangfy97/sborganize/issues"
+
+[project.optional-dependencies]
+device = ["pymobiledevice3==11.50.2"]
+dev = ["pytest>=9.2,<10", "ruff==0.17.4", "build>=1.6,<2"]
+
+[project.scripts]
+sborganize = "sborganize.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sborganize = ["data/*.json", "data/*.swift", "data/*.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["build", "dist", ".prototype"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

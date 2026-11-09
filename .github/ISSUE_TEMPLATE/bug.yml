@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible CLI or compatibility problem.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not attach API keys, raw scans/backups, device identifiers or your full app inventory.
+        Prefer a synthetic fixture. Sensitive vulnerabilities belong in the Security tab.
+  - type: input
+    id: version
+    attributes:
+      label: sborganize version
+      description: Output of sborganize --version.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Host OS and Python version
+      placeholder: macOS / Linux, Python 3.x
+    validations:
+      required: true
+  - type: input
+    id: ios
+    attributes:
+      label: iOS version, if device-related
+      description: No serial number or device identifier.
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and expected behavior
+      description: Command, expected result, actual result. Redact private paths and identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted error or synthetic reproduction
+      description: Do not paste raw JSON plans or phone backups.
+      render: text

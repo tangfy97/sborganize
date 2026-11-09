@@ -1,0 +1,14 @@
+# Notes for coding agents
+
+- Product shape: **open-source CLI only** — no branded app work unless the human explicitly expands scope.
+- Device I/O: **self-owned** via pymobiledevice3 — do not shell out to Unjiggle for read/write.
+- Intelligence: **rules default**; `--smart` = Apple on-device → rules. No Ollama. Optional OpenRouter requires explicit `--cloud`; never auto-fallback to cloud. `plan --cloud` sends unresolved app metadata + folder labels/categories. `review --cloud` explicitly sends all recognized Home Screen app names/IDs and current folder membership for advisory reassessment. Never send raw IconState or device identity. Do not probe local models when the user has chosen cloud.
+- Full review: advisory report under `reviews/`, separate from writable plans. Validate every app response; reuse completed cloud batches. Current regional membership is context, not an authoritative region rule during reassessment.
+- Reorganization: `review --recheck` reuses saved candidates locally; `plan --from-review` creates a separate preview after region/identity/domain validation. Only explicit local mappings may create a new folder. Preserve existing folder anchors; refuse emptying an existing folder. Refresh from a newer device snapshot only for appended recognized icons and allowed app bookkeeping, never arbitrary structural changes.
+- Explicit redesign: user-requested emoji renaming/reordering uses `plan --policy` with exhaustive per-app assignments and explicit source/target/name folder edits. This opt-in may rename/reorder existing editable folders; only `displayName` may change in their metadata. All folder slots are reused, every app needs a reason, all names are emoji, internal pages fill in order. Default modes still prohibit implicit folder renames/moves. Dock, pins and opaque nodes remain strict.
+- Current user policy (2026-11-09): banks/payments and bills span regions, in adjacent groups; local CN/HK shopping/government/transport retain region groups. Separate ground transport from flights/travel, entertainment/news/music from AI, combine cloud storage with reading/learning/translation. Home services such as Werkspot are not shopping. Prefer this explicit user policy over older region-first choices.
+- Writes: preview default; `apply` must keep backup + round-trip + confirm.
+- Canonical docs: `docs/plans/2026-11-08-sborganize-design.md`, `docs/plans/2026-11-08-implementation-plan.md`, `PRIVACY.md`.
+- Prefer fixtures over live device in tests. Preserve unknown IconState nodes.
+- UI copy: calm, short, Nordic-minimal — avoid noisy ASCII dashboards.
+- Public CLI UX: keep JSON undecorated and human output safe for pipes/NO_COLOR. Local help, demo, config and saved-plan inspection must work without USB, credits or model probes. Use the selected-plan pointer consistently across planning modes. Never publish local layouts, backups, keys or policy drafts.

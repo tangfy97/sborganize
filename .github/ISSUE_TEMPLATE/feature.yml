@@ -1,0 +1,18 @@
+name: Feature or classification improvement
+description: Suggest a useful workflow or source-backed app classification.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is difficult today?
+      description: Describe the user task and current friction.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Desired behavior
+      description: For app identity rules, provide a public product page and public bundle ID. Do not post your installed-app list.
+    validations:
+      required: true

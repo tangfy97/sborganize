@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "udid": "synthetic-demo",
+  "source": "fixture",
+  "note": "Synthetic IconState, not a real device dump. First list is dock.",
+  "icon_state": [
+    [
+      {
+        "bundleIdentifier": "com.apple.mobilephone",
+        "displayIdentifier": "com.apple.mobilephone",
+        "displayName": "Phone",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.mobilesafari",
+        "displayIdentifier": "com.apple.mobilesafari",
+        "displayName": "Safari",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.MobileSMS",
+        "displayIdentifier": "com.apple.MobileSMS",
+        "displayName": "Messages",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.camera",
+        "displayIdentifier": "com.apple.camera",
+        "displayName": "Camera",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      }
+    ],
+    [
+      {
+        "listType": "folder",
+        "displayName": "Social",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "org.whispersystems.signal",
+              "displayIdentifier": "org.whispersystems.signal",
+              "displayName": "Signal",
+              "bundleVersion": "1.0",
+              "demoMetadata": {
+                "synthetic": true
+              }
+            }
+          ],
+          [
+            {
+              "bundleIdentifier": "ph.telegra.Telegraph",
+              "displayIdentifier": "ph.telegra.Telegraph",
+              "displayName": "Telegram",
+              "bundleVersion": "1.0",
+              "demoMetadata": {
+                "synthetic": true
+              }
+            }
+          ],
+          []
+        ],
+        "demoFolderID": "social"
+      },
+      {
+        "listType": "folder",
+        "displayName": "Work",
+        "iconLists": [
+          [
+            {
+              "bundleIdentifier": "notion.id",
+              "displayIdentifier": "notion.id",
+              "displayName": "Notion",
+              "bundleVersion": "1.0",
+              "demoMetadata": {
+                "synthetic": true
+              }
+            }
+          ],
+          [
+            {
+              "bundleIdentifier": "com.apple.mobilenotes",
+              "displayIdentifier": "com.apple.mobilenotes",
+              "displayName": "Notes",
+              "bundleVersion": "1.0",
+              "demoMetadata": {
+                "synthetic": true
+              }
+            }
+          ]
+        ],
+        "demoFolderID": "work"
+      },
+      {
+        "listType": "widget",
+        "displayName": "Weather",
+        "bundleIdentifier": "com.apple.weather",
+        "size": {
+          "width": 4,
+          "height": 2
+        },
+        "configuration": {
+          "preserve": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "bundleIdentifier": "net.whatsapp.WhatsApp",
+        "displayIdentifier": "net.whatsapp.WhatsApp",
+        "displayName": "WhatsApp",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.burbn.instagram",
+        "displayIdentifier": "com.burbn.instagram",
+        "displayName": "Instagram",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.todoist.ios",
+        "displayIdentifier": "com.todoist.ios",
+        "displayName": "Todoist",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.tinyspeck.chatlyio",
+        "displayIdentifier": "com.tinyspeck.chatlyio",
+        "displayName": "Slack",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "local.example.reading",
+        "displayIdentifier": "local.example.reading",
+        "displayName": "Reading",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      null,
+      false
+    ],
+    [
+      {
+        "bundleIdentifier": "com.spotify.client",
+        "displayIdentifier": "com.spotify.client",
+        "displayName": "Spotify",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.netflix.Netflix",
+        "displayIdentifier": "com.netflix.Netflix",
+        "displayName": "Netflix",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.google.ios.youtube",
+        "displayIdentifier": "com.google.ios.youtube",
+        "displayName": "YouTube",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.Maps",
+        "displayIdentifier": "com.apple.Maps",
+        "displayName": "Maps",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.ubercab.UberClient",
+        "displayIdentifier": "com.ubercab.UberClient",
+        "displayName": "Uber",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.airbnb.app",
+        "displayIdentifier": "com.airbnb.app",
+        "displayName": "Airbnb",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      }
+    ],
+    [
+      {
+        "bundleIdentifier": "com.revolut.revolut",
+        "displayIdentifier": "com.revolut.revolut",
+        "displayName": "Revolut",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.paypal.ppclient",
+        "displayIdentifier": "com.paypal.ppclient",
+        "displayName": "PayPal",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.wise.Wise",
+        "displayIdentifier": "com.wise.Wise",
+        "displayName": "Wise",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.calculator",
+        "displayIdentifier": "com.apple.calculator",
+        "displayName": "Calculator",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.compass",
+        "displayIdentifier": "com.apple.compass",
+        "displayName": "Compass",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.measure",
+        "displayIdentifier": "com.apple.measure",
+        "displayName": "Measure",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      }
+    ],
+    [
+      {
+        "bundleIdentifier": "com.apple.reminders",
+        "displayIdentifier": "com.apple.reminders",
+        "displayName": "Reminders",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.booking.BookingApp",
+        "displayIdentifier": "com.booking.BookingApp",
+        "displayName": "Booking",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      },
+      {
+        "bundleIdentifier": "com.apple.podcasts",
+        "displayIdentifier": "com.apple.podcasts",
+        "displayName": "Podcasts",
+        "bundleVersion": "1.0",
+        "demoMetadata": {
+          "synthetic": true
+        }
+      }
+    ],
+    [
+      null,
+      null,
+      0
+    ]
+  ]
+}
