@@ -1,10 +1,11 @@
 import json
+import sys
 from pathlib import Path
 
 import pytest
 from typer.testing import CliRunner
 
-from sborganize.cli import app
+from sborganize.cli import app, main
 from sborganize.config import Config, load_config
 from sborganize.guides import GUIDES
 from sborganize.planner import Plan, build_plan
@@ -142,13 +143,12 @@ def test_installed_guides_are_local_and_require_no_credits(
 
 def test_json_and_no_color_work_even_with_forced_terminal_color(tmp_path):
     prefix = ["--data-dir", str(tmp_path)]
-    result = runner.invoke(app, [*prefix, "demo", "--json"], env={"FORCE_COLOR": "1"}, color=True)
+    environment = {"FORCE_COLOR": "1", "TERM": "xterm-256color"}
+    result = runner.invoke(app, [*prefix, "demo", "--json"], env=environment, color=True)
     assert result.exit_code == 0 and json.loads(result.stdout)["plan"]
     assert "\x1b[" not in result.stdout
     for options in [["demo"], ["--help"]]:
-        result = runner.invoke(
-            app, [*prefix, "--no-color", *options], env={"FORCE_COLOR": "1"}, color=True
-        )
+        result = runner.invoke(app, [*prefix, "--no-color", *options], env=environment, color=True)
         assert result.exit_code == 0, result.exception
         assert "\x1b[" not in result.stdout
 
@@ -159,6 +159,24 @@ def test_terminal_treats_app_labels_as_text_and_removes_escape_controls(capsys):
     output = capsys.readouterr().out
     assert "[red]name[/red]" in output and "\x1b" not in output
     set_plain(False)
+
+
+@pytest.mark.parametrize("options", [["--help"], ["demo"], ["guide"]])
+def test_no_color_entrypoint_disables_all_styling_and_restores_environment(
+    tmp_path, monkeypatch, capsys, options
+):
+    monkeypatch.setenv("NO_COLOR", "1")
+    monkeypatch.setenv("FORCE_COLOR", "1")
+    monkeypatch.setenv("TERM", "xterm-256color")
+    monkeypatch.setattr(sys, "argv", ["sborganize", "--data-dir", str(tmp_path), *options])
+    with pytest.raises(SystemExit) as exit_info:
+        main()
+    assert exit_info.value.code == 0
+    assert "\x1b" not in capsys.readouterr().out
+    import os
+
+    assert os.environ["TERM"] == "xterm-256color"
+    assert os.environ["NO_COLOR"] == "1"
 
 
 def test_policy_export_is_complete_editable_and_refuses_overwrite(tmp_path, no_external_io):

@@ -1,6 +1,8 @@
 """Restrained terminal styling; redirected output and JSON stay plain."""
 
+import os
 import sys
+from contextlib import contextmanager
 from contextvars import ContextVar
 
 from rich.console import Console
@@ -14,10 +16,27 @@ def set_plain(value: bool) -> None:
     _plain.set(value)
 
 
+@contextmanager
+def plain_environment():
+    previous = {key: os.environ.get(key) for key in ("NO_COLOR", "TERM")}
+    os.environ.update(NO_COLOR="1", TERM="dumb")
+    try:
+        yield
+    finally:
+        for key, value in previous.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
+
+
 def console(*, err=False) -> Console:
+    plain = _plain.get() or "NO_COLOR" in os.environ
     return Console(
         file=sys.stderr if err else sys.stdout,
-        no_color=_plain.get() or None,
+        no_color=plain,
+        color_system=None if plain else "auto",
+        force_terminal=False if plain else None,
         highlight=False,
         markup=False,
         emoji=False,

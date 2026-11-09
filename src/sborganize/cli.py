@@ -38,7 +38,7 @@ from sborganize.storage import (
     selected_plan,
     write_json,
 )
-from sborganize.terminal import set_plain, write_text
+from sborganize.terminal import plain_environment, set_plain, write_text
 from sborganize.wire import prepare_device_plan, validate_wire_state
 
 app = typer.Typer(
@@ -77,16 +77,7 @@ def version_callback(value: bool):
 
 def no_color_callback(ctx: typer.Context, value: bool):
     if value:
-        previous = os.environ.get("NO_COLOR")
-        os.environ["NO_COLOR"] = "1"
-
-        def restore_color():
-            if previous is None:
-                os.environ.pop("NO_COLOR", None)
-            else:
-                os.environ["NO_COLOR"] = previous
-
-        ctx.call_on_close(restore_color)
+        ctx.with_resource(plain_environment())
     return value
 
 
@@ -785,8 +776,11 @@ def doctor(
 
 
 def main():
+    from contextlib import nullcontext
+
     try:
-        app()
+        with plain_environment() if "NO_COLOR" in os.environ else nullcontext():
+            app()
     except TimeoutError:
         write_text(
             "Error: USB read timed out. Unlock the phone and check trust in Finder.", err=True

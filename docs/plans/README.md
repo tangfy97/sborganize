@@ -1,5 +1,8 @@
 # Plans
 
+The [public CLI alpha](./2026-11-09-public-cli-release.md) describes onboarding,
+terminal output and publication checks without touching the organized phone.
+
 The [whole-inventory review extension](./2026-11-09-whole-inventory-review.md)
 adds advisory all-app reassessment and explicitly broader cloud metadata scope.
 
